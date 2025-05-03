@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="main-title">မင်္ဂလာပါ!</h1>
+        <p>ကျွန်တော့်နာမည်က <span class="highlight">မောင်မောင်</span> ပါ</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">ကျွန်တော်အကြောင်း</a></li>
+            <li><a href="#skills">ကျွမ်းကျင်မှုများ</a></li>
+            <li><a href="#projects">လုပ်ငန်းစဉ်များ</a></li>
+            <li><a href="#contact">ဆက်သွယ်ရန်</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>ကျွန်တော်အကြောင်း</h2>
+        <div class="about-content">
+            <img src="profile.jpg" alt="Profile Picture" id="profile-img">
+            <p>ကျွန်တော်က အထက်တန်းကျောင်းသားတစ်ယောက်ဖြစ်ပြီး ဝဘ်ဒီဇိုင်းနဲ့ ပရိုဂရမ်းမင်းကို စိတ်ဝင်စားပါတယ်။ အင်္ဂလိပ်စာကိုလည်း အထူးလေ့လာနေပါတယ်။</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>ကျွမ်းကျင်မှုများ</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>HTML</h3>
+                <div class="progress-bar" id="html-bar"></div>
+            </div>
+            <div class="skill-box">
+                <h3>CSS</h3>
+                <div class="progress-bar" id="css-bar"></div>
+            </div>
+            <div class="skill-box">
+                <h3>JavaScript</h3>
+                <div class="progress-bar" id="js-bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>လုပ်ငန်းစဉ်များ</h2>
+        <div class="projects-grid" id="projects-container">
+            <!-- JavaScript ကနေ project တွေထည့်သွင်းမှာဖြစ်ပါတယ် -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>ဆက်သွယ်ရန်</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">နာမည်:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">အီးမေးလ်:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">မက်ဆေ့ဂျ်:</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit">ပို့ရန်</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 ကျွန်တော့် Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
