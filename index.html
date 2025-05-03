@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>မြန်မာ GitHub - စောအုန်းမောင်</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: 'Padauk', 'Myanmar Text', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+        
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        
+        header {
+            background-color: #24292e;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        nav {
+            background-color: #2b3137;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #0366d6;
+        }
+        
+        main {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .dark-mode section {
+            background-color: #2d2d2d;
+            color: #f0f0f0;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: #24292e;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .project {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+        
+        .dark-mode .project {
+            border-color: #444;
+        }
+        
+        .project:hover {
+            border-color: #0366d6;
+        }
+        
+        h1, h2, h3 {
+            color: #0366d6;
+        }
+        
+        .dark-mode h1, .dark-mode h2, .dark-mode h3 {
+            color: #58a6ff;
+        }
+        
+        button {
+            background-color: #0366d6;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #0550aa;
+        }
+        
+        #theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        
+        #back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            background-color: #0366d6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        #back-to-top:hover {
+            background-color: #0550aa;
+        }
+        
+        .language-selector {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="language-selector">
+            <select id="language-select">
+                <option value="my">မြန်မာ</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        
+        <h1 id="main-title">မြန်မာ GitHub</h1>
+        <p id="main-subtitle">ကွန်ပျူတာပရိုဂရမ်းမင်းကို မြန်မာလို လေ့လာကြမယ်</p>
+        
+        <button id="theme-toggle">🌓</button>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home" id="nav-home">ပင်မ</a></li>
+            <li><a href="#projects" id="nav-projects">ပရောဂျက်များ</a></li>
+            <li><a href="#tutorials" id="nav-tutorials">သင်ခန်းစာများ</a></li>
+            <li><a href="#about" id="nav-about">ကျွန်တော်အကြောင်း</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <h2 id="welcome-title">ကြိုဆိုပါတယ်</h2>
+            <p id="welcome-text">မင်္ဂလာပါ! ကျွန်တော့်နာမည်က စောအုန်းမောင်ပါ။ အထက်တန်းကျောင်းသားတစ်ယောက်ဖြစ်ပြီး အင်္ဂလိပ်စာနဲ့ ကွန်ပျူတာပရိုဂရမ်းမင်းကို လေ့လာနေပါတယ်။</p>
+            <p id="welcome-text2">ဒီဝက်ဘ်ဆိုက်မှာ ကျွန်တော်လေ့လာထားတဲ့ အရာတွေကို မျှဝေသွားမှာဖြစ်ပါတယ်။</p>
+            
+            <button id="greet-btn">ကြိုဆိုစာကိုနှိပ်ပါ</button>
+            <p id="greeting-message" style="display: none;"></p>
+        </section>
+        
+        <section id="projects">
+            <h2 id="projects-title">ပရောဂျက်များ</h2>
+            
+            <div class="project">
+                <h3>မြန်မာစာဖတ်ခြင်းအက်ပလီကေးရှင်း</h3>
+                <p>မြန်မာစာဖတ်ရတာ အဆင်ပြေစေဖို့ ရည်ရွယ်တဲ့ အက်ပလီကေးရှင်းလေးပါ။</p>
+                <p><strong>သုံးထားသော နည်းပညာ:</strong> HTML, CSS, JavaScript</p>
+                <button class="view-demo-btn" data-project="1">Demo ကြည့်ရန်</button>
+            </div>
+            
+            <div class="project">
+                <h3>အင်္ဂလိပ်စာလေ့လာရေး ဝက်ဘ်ဆိုက်</h3>
+                <p>အင်္ဂလိပ်စာလေ့လာနေတဲ့ မြန်မာကျောင်းသားတွေအတွက် အထောက်အကူဖြစ်စေမယ့် ဝက်ဘ်ဆိုက်။</p>
+                <p><strong>သုံးထားသော နည်းပညာ:</strong> Python, Django</p>
+                <button class="view-demo-btn" data-project="2">Demo ကြည့်ရန်</button>
+            </div>
+        </section>
+        
+        <section id="tutorials">
+            <h2 id="tutorials-title">သင်ခန်းစာများ</h2>
+            <h3>HTML & CSS အခြေခံများ</h3>
+            <p>ဝက်ဘ်ဆိုက်တည်ဆောက်ခြင်းကို စတင်လေ့လာသူများအတွက် အခြေခံသင်ခန်းစာများ။</p>
+            
+            <h3>Python ပရိုဂရမ်းမင်း</h3>
+            <p>ပရိုဂရမ်းမင်းကို စတင်လေ့လာမယ့်သူတွေအတွက် Python ဘာသာစကားအခြေခံများ။</p>
+            
+            <div id="tutorial-counter">
+                <p>သင်ခန်းစာစုစုပေါင်း: <span id="counter">2</span></p>
+                <button id="add-tutorial-btn">သင်ခန်းစာထပ်ထည့်ရန်</button>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2 id="about-title">ကျွန်တော်အကြောင်း</h2>
+            <p>ကျွန်တော်က အထက်တန်းကျောင်းသားတစ်ယောက်ဖြစ်ပြီး နည်းပညာကို အထူးစိတ်ဝင်စားပါတယ်။ အင်္ဂလိပ်စာနဲ့ ကွန်ပျူတာပရိုဂရမ်းမင်းကို လေ့လာနေပါတယ်။</p>
+            <p>ကျွန်တော်ရဲ့ ရည်မှန်းချက်က နည်းပညာနယ်ပယ်မှာ တစ်နေ့တစ်ခြား တိုးတက်ပြီး မြန်မာနိုင်ငံအတွက် အကျိုးပြုနိုင်တဲ့ ဆော့ဖ်ဝဲတွေ ဖန်တီးနိုင်ဖို့ပါ။</p>
+            
+            <div id="skills">
+                <h3>ကျွမ်းကျင်မှုများ</h3>
+                <ul id="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript (အခြေခံ)</li>
+                </ul>
+                <input type="text" id="new-skill" placeholder="ကျွမ်းကျင်မှုအသစ်ထည့်ပါ">
+                <button id="add-skill-btn">ထပ်ထည့်ရန်</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="current-year">2023</span> စောအုန်းမောင်. All rights reserved.</p>
+        <p id="contact-text">Contact: myanmargithub@example.com</p>
+        <p id="visit-counter">ဤဝက်ဘ်ဆိုက်ကို <span id="counter">0</span> ကြိမ်လာရောက်ကြည့်ရှုပြီးပါပြီ</p>
+    </footer>
+    
+    <button id="back-to-top" title="အပေါ်သို့">↑</button>
+    
+    <script>
+        // JavaScript Code
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+            });
+            
+            // Check for saved theme preference
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Back to top button
+            const backToTopBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.style.display = 'block';
+                } else {
+                    backToTopBtn.style.display = 'none';
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Greeting button
+            const greetBtn = document.getElementById('greet-btn');
+            const greetingMessage = document.getElementById('greeting-message');
+            greetBtn.addEventListener('click', function() {
+                greetingMessage.textContent = 'ကျေးဇူးတင်ပါတယ်! ကျွန်တော်တို့အတူတူ နည်းပညာလေ့လာကြမယ်!';
+                greetingMessage.style.display = 'block';
+                
+                // Hide the message after 3 seconds
+                setTimeout(function() {
+                    greetingMessage.style.display = 'none';
+                }, 3000);
+            });
+            
+            // View demo buttons
+            const viewDemoBtns = document.querySelectorAll('.view-demo-btn');
+            viewDemoBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const projectNum = this.getAttribute('data-project');
+                    alert(`Project ${projectNum} ရဲ့ Demo ကိုကြည့်ရှုမည်! (ဤနေရာတွင် Demo link ထည့်သွင်းနိုင်ပါသည်)`);
+                });
+            });
+            
+            // Add tutorial button
+            const addTutorialBtn = document.getElementById('add-tutorial-btn');
+            const tutorialCounter = document.getElementById('counter');
+            addTutorialBtn.addEventListener('click', function() {
+                let currentCount = parseInt(tutorialCounter.textContent);
+                currentCount++;
+                tutorialCounter.textContent = currentCount;
+                alert(`သင်ခန်းစာအသစ်တစ်ခုထပ်ထည့်ပြီးပါပြီ! စုစုပေါင်း ${currentCount} ခုရှိပါပြီ။`);
+            });
+            
+            // Add skill functionality
+            const addSkillBtn = document.getElementById('add-skill-btn');
+            const newSkillInput = document.getElementById('new-skill');
+            const skillsList = document.getElementById('skills-list');
+            
+            addSkillBtn.addEventListener('click', function() {
+                if (newSkillInput.value.trim() !== '') {
+                    const newSkill = document.createElement('li');
+                    newSkill.textContent = newSkillInput.value.trim();
+                    skillsList.appendChild(newSkill);
+                    newSkillInput.value = '';
+                }
+            });
+            
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Visit counter
+            let visitCount = localStorage.getItem('visitCount') || 0;
+            visitCount++;
+            localStorage.setItem('visitCount', visitCount);
+            document.getElementById('visit-counter').querySelector('span').textContent = visitCount;
+            
+            // Language selector functionality (basic example)
+            const languageSelect = document.getElementById('language-select');
+            languageSelect.addEventListener('change', function() {
+                if (this.value === 'en') {
+                    // In a real app, you would replace all text with English translations
+                    alert('Changing to English (This is just a demo. In a real app, all text would be translated)');
+                } else {
+                    alert('မြန်မာဘာသာသို့ပြောင်းမည်');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
